@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lorven Infra Build — premium plotted developments and thoughtful spaces in Hyderabad.">
+  <title>Lorven Infra Build | Crafting Iconic Landmarks</title>
+  <style>
+    :root{--bg:#090909;--panel:#121212;--gold:#d7b56d;--gold2:#f0d99d;--text:#f6f2e9;--muted:#b6b0a3;--line:rgba(215,181,109,.25)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;object-fit:cover}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#111;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:1px}
+    .brand-mark{width:42px;height:42px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:Georgia,serif;font-size:25px}
+    .brand small{display:block;font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:500}
+    .navlinks{display:flex;gap:23px;align-items:center;font-size:13px;color:#e8e1d3}
+    .navlinks a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#100e09;font-weight:800;padding:13px 20px;border:1px solid var(--gold);transition:.2s;cursor:pointer}
+    .btn:hover{background:transparent;color:var(--gold)}
+    .btn.outline{background:transparent;color:var(--gold)}
+    .menu-btn{display:none;background:transparent;border:1px solid var(--line);color:var(--gold);padding:8px 11px;font-size:20px}
+    .hero{min-height:650px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.56) 55%,rgba(0,0,0,.24)),url('https://lorveninfrabuild.com/wp-content/uploads/2026/08/prime-nh44-frontage.webp') center/cover}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 28%);pointer-events:none}
+    .hero-content{position:relative;z-index:1;max-width:720px;padding:90px 0}
+    .eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:bold;margin-bottom:18px}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;line-height:1.12}
+    h1{font-size:clamp(42px,6.2vw,76px);margin-bottom:22px}
+    h1 span,h2 span{color:var(--gold)}
+    .hero p{max-width:590px;color:#e0d9cc;font-size:17px;margin-bottom:30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:-1px}
+    .stat{background:#0e0e0e;text-align:center;padding:24px 12px}
+    .stat strong{display:block;font:30px Georgia,serif;color:var(--gold)}
+    .stat span{font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+    section{padding:88px 0}
+    .section-head{max-width:720px;margin-bottom:36px}
+    .section-head h2{font-size:clamp(32px,4.5vw,49px);margin-bottom:14px}
+    .section-head p{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-image{height:460px;position:relative;border:1px solid var(--line);padding:10px}
+    .about-image img{height:100%}
+    .image-tag{position:absolute;bottom:25px;left:-15px;background:var(--gold);color:#111;padding:14px 18px;font-weight:800}
+    .about-copy p{color:var(--muted);margin:18px 0}
+    .checks{list-style:none;display:grid;gap:12px;margin:22px 0}
+    .checks li:before{content:"✦";color:var(--gold);margin-right:10px}
+    .project{background:linear-gradient(180deg,#0b0b0b,#111 50%,#0b0b0b)}
+    .project-card{display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);background:#0c0c0c}
+    .project-card img{height:100%;min-height:420px}
+    .project-info{padding:clamp(25px,4vw,48px)}
+    .project-info h3{font-size:38px;margin:8px 0 18px}
+    .project-info p{color:var(--muted);margin-bottom:20px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+    .pill{border:1px solid var(--line);color:var(--gold2);padding:7px 11px;font-size:12px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--line);overflow:hidden}
+    .card img{height:220px;transition:transform .5s}
+    .card:hover img{transform:scale(1.04)}
+    .card-body{padding:20px}
+    .card-body h3{font-size:22px;margin-bottom:8px}
+    .card-body p{font-size:13px;color:var(--muted)}
+    .amenities{background:#0d0d0d}
+    .amenity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .amenity{position:relative;min-height:220px;overflow:hidden;border:1px solid var(--line)}
+    .amenity img{position:absolute;inset:0;height:100%;transition:transform .4s}
+    .amenity:hover img{transform:scale(1.06)}
+    .amenity:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 75%)}
+    .amenity span{position:absolute;z-index:1;bottom:15px;left:15px;font-weight:700}
+    .location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .location-grid .card img{height:190px}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+    .contact-box{border:1px solid var(--line);padding:28px;background:var(--panel)}
+    .contact-box h3{font-size:27px;margin-bottom:16px}
+    .contact-box p{color:var(--muted);margin:10px 0}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    input,select,textarea{width:100%;padding:14px;background:#080808;color:var(--text);border:1px solid #393328;font:inherit;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+    textarea{grid-column:1/-1;min-height:110px;resize:vertical}
+    form .btn{grid-column:1/-1}
+    .form-note{font-size:12px;color:var(--muted);grid-column:1/-1}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}
+    footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px 0}
+    @media(max-width:850px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#090909;padding:20px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}.about-grid,.project-card,.contact-grid{grid-template-columns:1fr}.project-card img{min-height:280px;max-height:390px}.cards{grid-template-columns:repeat(2,1fr)}.amenity-grid{grid-template-columns:repeat(2,1fr)}.location-grid{grid-template-columns:repeat(2,1fr)}.about-image{height:350px}}
+    @media(max-width:540px){.hero{min-height:590px}.hero p{font-size:15px}.stats{grid-template-columns:1fr}.stat{padding:17px}.cards,.location-grid{grid-template-columns:1fr}.amenity-grid{grid-template-columns:1fr 1fr}.amenity{min-height:170px}section{padding:62px 0}form{grid-template-columns:1fr}textarea,form .btn,.form-note{grid-column:1}.brand{font-size:13px}.brand-mark{width:36px;height:36px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Hyderabad, Telangana</span><span>Thoughtful spaces. Lasting value.</span></div></div>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home"><span class="brand-mark">L</span><span>LORVEN INFRA BUILD<small>CRAFTING ICONIC LANDMARKS</small></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#project">Project</a><a href="#gallery">Gallery</a><a href="#amenities">Amenities</a><a href="#location">Location</a><a href="#contact">Contact</a></div>
+      <a class="btn nav-cta" href="#contact">Enquire Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container"><div class="hero-content">
+        <div class="eyebrow">Premium plotted development</div>
+        <h1>Build Your Future.<br><span>Own Your Space.</span></h1>
+        <p>Discover considered spaces by Lorven Infra Build, created for people who value location, thoughtful planning and a future-ready lifestyle.</p>
+        <div class="actions"><a class="btn" href="#project">Explore Lorven Nova</a><a class="btn outline" href="#contact">Book a Site Visit</a></div>
+      </div></div>
+    </section>
+
+    <div class="container"><div class="stats">
+      <div class="stat"><strong>Prime</strong><span>Growth corridor</span></div>
+      <div class="stat"><strong>NH 44</strong><span>Regional connectivity</span></div>
+      <div class="stat"><strong>Lorven</strong><span>Built around your future</span></div>
+    </div></div>
+
+    <section id="about"><div class="container about-grid">
+      <div class="about-image"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/06/1.jpeg" alt="Lorven plotted development" loading="lazy"><div class="image-tag">A place to grow</div></div>
+      <div class="about-copy"><div class="eyebrow">About Lorven</div><h2>Spaces designed for <span>what comes next.</span></h2>
+        <p>Lorven Infra Build focuses on creating well-considered property opportunities with an emphasis on location, accessibility and a better everyday experience.</p>
+        <p>Explore our project, discover the surrounding growth corridor and speak with our team to learn more about availability and site visits.</p>
+        <ul class="checks"><li>Location-led project planning</li><li>Convenient regional connectivity</li><li>Open spaces and lifestyle amenities</li><li>Personal assistance for enquiries and site visits</li></ul>
+        <a class="btn" href="#contact">Talk to Our Team</a>
+      </div>
+    </div></section>
+
+    <section class="project" id="project"><div class="container">
+      <div class="section-head"><div class="eyebrow">Featured project</div><h2>Introducing <span>Lorven Nova</span></h2><p>Premium villa plots in the Shadnagar region, along the Hyderabad–Bengaluru NH 44 corridor. Contact our team for current availability, approvals and project details.</p></div>
+      <div class="project-card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/08/prime-nh44-frontage.webp" alt="Lorven Nova project frontage" loading="lazy">
+        <div class="project-info"><div class="eyebrow">Lorven Nova · Shadnagar</div><h3>Your next chapter starts here.</h3><p>A plotted development concept for those looking to explore land ownership in a connected growth corridor.</p>
+          <div class="pills"><span class="pill">Villa Plots</span><span class="pill">NH 44 Corridor</span><span class="pill">Site Visit Enquiries</span></div>
+          <a class="btn" href="#contact">Request Project Details</a>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="gallery"><div class="container"><div class="section-head"><div class="eyebrow">Project gallery</div><h2>Take a closer <span>look.</span></h2><p>Project and location imagery supplied for the Lorven website.</p></div>
+      <div class="cards">
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/06/2.jpeg" alt="Lorven project view" loading="lazy"><div class="card-body"><h3>Project View</h3><p>Explore the project surroundings.</p></div></article>
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/06/10.jpeg" alt="Lorven development view" loading="lazy"><div class="card-body"><h3>Development</h3><p>Learn more about the plotted development.</p></div></article>
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/06/3.jpeg" alt="Lorven site view" loading="lazy"><div class="card-body"><h3>Site Experience</h3><p>Arrange a visit to see the location.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="amenities" id="amenities"><div class="container"><div class="section-head"><div class="eyebrow">Lifestyle</div><h2>Room for the things <span>you love.</span></h2><p>Illustrative amenity highlights. Please confirm the final amenities and specifications with the project team.</p></div>
+      <div class="amenity-grid">
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-cricket.jpg" alt="Cricket area" loading="lazy"><span>Cricket</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-basketball.jpg" alt="Basketball court" loading="lazy"><span>Basketball</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/08/nova-volleyball.webp" alt="Volleyball court" loading="lazy"><span>Volleyball</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-playground.jpg" alt="Playground" loading="lazy"><span>Playground</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-yoga.jpg" alt="Yoga space" loading="lazy"><span>Yoga</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/08/meditation-pavilion.webp" alt="Meditation pavilion" loading="lazy"><span>Meditation</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-amphitheatre.jpg" alt="Amphitheatre" loading="lazy"><span>Amphitheatre</span></div>
+        <div class="amenity"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/nova-lawn.jpg" alt="Green lawn" loading="lazy"><span>Green Lawn</span></div>
+      </div>
+    </div></section>
+
+    <section id="location"><div class="container"><div class="section-head"><div class="eyebrow">Location advantage</div><h2>Connected to <span>opportunity.</span></h2><p>Explore nearby connectivity and landmarks. Travel times and distances should be confirmed before publishing.</p></div>
+      <div class="location-grid">
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/08/nh44-bangalore-highway.webp" alt="NH 44 highway" loading="lazy"><div class="card-body"><h3>NH 44 Corridor</h3><p>Hyderabad–Bengaluru highway connectivity.</p></div></article>
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/07/lmk-airport.webp" alt="Airport connectivity" loading="lazy"><div class="card-body"><h3>Airport Connectivity</h3><p>Regional access toward the airport corridor.</p></div></article>
+        <article class="card"><img src="https://lorveninfrabuild.com/wp-content/uploads/2026/08/future-growth-corridor.webp" alt="Growth corridor" loading="lazy"><div class="card-body"><h3>Growth Corridor</h3><p>Explore the area's development landscape.</p></div></article>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="container"><div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let’s talk about <span>your plans.</span></h2><p>Share your details and choose how you would like to enquire.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box"><h3>Lorven Infra Build</h3><p>📍 Hyderabad, Telangana</p><p>🏡 Project: Lorven Nova, Shadnagar region</p><p>📞 Add your official phone number before publishing.</p><div class="gold-line"></div><p>Use the enquiry form to prepare a message for your email app. The form does not automatically send or store enquiries until an email/form service is connected.</p></div>
+        <div class="contact-box"><form id="enquiryForm">
+          <input name="name" placeholder="Your full name" required>
+          <input name="phone" type="tel" placeholder="Phone number" required>
+          <input name="email" type="email" placeholder="Email address (optional)">
+          <select name="interest" required><option value="">Interested in...</option><option>Project details</option><option>Plot availability</option><option>Site visit</option><option>Other enquiry</option></select>
+          <textarea name="message" placeholder="Your message (optional)"></textarea>
+          <button class="btn" type="submit">Prepare Enquiry</button>
+          <div class="form-note" id="formNote">This opens your email app with the enquiry details. Add the official business email in the code before publishing.</div>
+        </form></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> Lorven Infra Build. All rights reserved.</span><span>Crafting Iconic Landmarks</span></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
+    menuBtn.addEventListener('click', () => navlinks.classList.toggle('open'));
+    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(this);
+      const subject = encodeURIComponent('Lorven Infra Build Website Enquiry');
+      const body = encodeURIComponent(
+        'Name: ' + (data.get('name') || '') + '\\n' +
+        'Phone: ' + (data.get('phone') || '') + '\\n' +
+        'Email: ' + (data.get('email') || '') + '\\n' +
+        'Interest: ' + (data.get('interest') || '') + '\\n' +
+        'Message: ' + (data.get('message') || '')
+      );
+      // Replace enquiries@yourdomain.com with the official business email before publishing.
+      window.location.href = 'mailto:enquiries@yourdomain.com?subject=' + subject + '&body=' + body;
+      document.getElementById('formNote').textContent = 'Your email app should open with the enquiry prepared. The business email is a placeholder—replace it with the official email before publishing.';
+    });
+  </script>
+</body>
+</html>
